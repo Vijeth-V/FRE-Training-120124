@@ -20,26 +20,11 @@ function displayTableData(data) {
     }, {});
 
     const tableContent = Object.entries(regionData)
-    .map(([region, { sum, details }]) => {
-        const sumRow = `<tr>
-            <td>${region}</td>
-            <td>Sum</td>
-            <td>${sum}</td>
-        </tr>`;
-
-        const detailRows = details
-            .map(({ model, sales }) => `
-                <tr>
-                    <td>${region}</td>
-                    <td>${model}</td>
-                    <td>${sales}</td>
-                </tr>`)
-            .join('');
-
-        return sumRow + detailRows;
-    })
-    .join('');
-
+        .map(([region, { sum, details }]) =>
+            `<tr><td>${region}</td><td>Sum</td><td>${sum}</td></tr>` +
+            details.map(({ model, sales }) => `<tr><td>${region}</td><td>${model}</td><td>${sales}</td></tr>`).join('')
+        )
+        .join('');
 
     document.getElementById('salesTableBody').innerHTML = tableContent;
 }
