@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+div {
+    text-align: center;
+    margin: 20px 0;
+}
+
+table {
+    width: 30%;
+    border-collapse: separate;
+    margin: 20px auto;
+    border: 2px double black;
+    border-spacing: 3px;
+}
+
+th,
+td {
+    border: 2px double black;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    font-weight: 800;
+}
