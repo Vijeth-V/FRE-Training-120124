@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.card{
+    width: 40%;
+    padding: 20px;
+    border-radius: 5px;
+
+}

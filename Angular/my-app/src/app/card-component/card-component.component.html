@@ -1,0 +1,27 @@
+<div>
+  <h1 style="text-align: center" [style.color]="h1Color">
+    The top card for color change
+  </h1>
+</div>
+<div class="container">
+  <div
+    class="card"
+    *ngFor="let card of card"
+    [ngStyle]="{
+      border: h1Color === card.btn_color ? '2px solid ' + card.btn_color : ''
+    }"
+  >
+    <h2>{{ card.title }}</h2>
+    <p>{{ card.content }}</p>
+    <button
+      [ngStyle]="{
+        'background-color': card.btn_color,
+        color: 'white',
+        padding: '10px'
+      }"
+      (click)="handleClick(card)"
+    >
+      Click me
+    </button>
+  </div>
+</div>
