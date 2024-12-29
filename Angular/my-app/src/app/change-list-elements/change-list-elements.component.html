@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="list">
+    <h1 style="margin-left: 10px">List</h1>
+    <div style="height: 1px; background-color: black"></div>
+    <div class="list-elements">
+      <div
+        *ngFor="let list of lists"
+        class="list-container"
+        (click)="handleClick(list)"
+      >
+        <div
+          class="color-bar"
+          [ngStyle]="{ 'border-left-color': list.color }"
+        ></div>
+        <div class="content">
+          <h3>{{ list.name }}</h3>
+          <div>{{ list.content | slice : 0 : 150 }}...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="list-seperator"></div>
+  <div class="list">
+    <h2 [ngStyle]="{ color: selectedElement.color }">
+      {{ selectedElement.name }}
+    </h2>
+    <p>{{ selectedElement.content }}</p>
+  </div>
+</div>
