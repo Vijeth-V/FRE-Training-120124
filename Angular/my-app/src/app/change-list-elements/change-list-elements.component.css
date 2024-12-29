@@ -26,12 +26,15 @@
 }
 
 .color-bar {
-  border-left: 6px solid; /* Ensures the border is visible */
-  height: 100%; /* Makes the bar match the height of the container */
-  margin-right: 10px; /* Space between the border and content */
-  min-height: 100px; /* Ensures a minimum height for the border */
+  border-left: 6px solid; 
+  height: 100%; 
+  margin-right: 10px; 
+  min-height: 100px; 
 }
 
-.content {
-  flex: 1;
+.save-button {
+    width: 50px; 
+    align-self: end; 
+    background-color: blue; 
+    color: white; 
 }

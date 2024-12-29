@@ -12,7 +12,7 @@
           class="color-bar"
           [ngStyle]="{ 'border-left-color': list.color }"
         ></div>
-        <div class="content">
+        <div>
           <h3>{{ list.name }}</h3>
           <div>{{ list.content | slice : 0 : 150 }}...</div>
         </div>
@@ -25,5 +25,6 @@
       {{ selectedElement.name }}
     </h2>
     <p>{{ selectedElement.content }}</p>
+    <button class="save-button">Save</button>
   </div>
 </div>
