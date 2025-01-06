@@ -10,8 +10,8 @@ export class AppComponent {
   title = 'practice';
 
   formData: { name: String; email: String } = {
-    name: 'vijererreeth',
-    email: 'vijetdffh1410@gmail.com',
+    name: 'vijeth',
+    email: 'vijeth1410@gmail.com',
   };
   handleData(data: any) {
     this.formData = data;
