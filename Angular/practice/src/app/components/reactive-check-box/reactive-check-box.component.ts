@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-check-box',
@@ -15,8 +15,6 @@ export class ReactiveCheckBoxComponent {
     { id: 4, name: 'Spider Man' },
     { id: 5, name: 'Black Panther' },
   ];
-
-  // selectedMovies: { id: number; name: string }[] = [];
 
   moviesForm: FormGroup;
   constructor(private fb: FormBuilder) {
