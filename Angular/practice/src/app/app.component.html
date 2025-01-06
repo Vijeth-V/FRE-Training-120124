@@ -1,0 +1,8 @@
+<!-- <app-template-driven-forms></app-template-driven-forms> -->
+
+<app-reactive-forms
+  (data)="handleData($event)"
+  [initialInput]="formData"
+></app-reactive-forms>
+
+<div *ngIf="formData">{{ formData.name }} {{ formData.email }}</div>

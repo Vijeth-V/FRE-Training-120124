@@ -1,0 +1,19 @@
+<p>Template Driven Form</p>
+<form #contactForm="ngForm" (ngSubmit)="handleData(contactForm)">
+  <p>
+    <label for="name">First Name</label>
+    <input
+      type="text"
+      id="name"
+      placeholder="Name"
+      name="name"
+      [(ngModel)]="name"
+    />
+  </p>
+  <p>
+    <label>Email</label>
+    <input type="text" placeholder="Email" name="email" [(ngModel)]="email" />
+  </p>
+
+  <button>Submit</button>
+</form>
