@@ -1,1 +1,23 @@
-<p>reactive-check-box works!</p>
+<h1>Reactive Check Box</h1>
+<div class="checkbox-form">
+  <form [formGroup]="moviesForm">
+    <button type="button" (click)="selectAll()" class="btn">Select All</button>
+    <button type="button" (click)="clearAll()" class="btn">Clear All</button>
+    <div *ngFor="let movie of movies">
+      <label>
+        <input
+          type="checkbox"
+          [value]="movie"
+          [checked]="selectedMovies.includes(movie)"
+          (change)="onCheckboxChange(movie)"
+        />
+        {{ movie.name }}
+      </label>
+    </div>
+  </form>
+
+  <h3>Selected Movies:</h3>
+  <ul>
+    <li *ngFor="let movie of selectedMovies">{{ movie.name }}</li>
+  </ul>
+</div>
