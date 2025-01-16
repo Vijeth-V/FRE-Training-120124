@@ -1,0 +1,57 @@
+<div class="container">
+  <h1>Contact US</h1>
+  <form *ngIf="showForm" [formGroup]="contactForm" (ngSubmit)="contactus()">
+    <div class="form-group">
+      <input
+        type="name"
+        id="name"
+        placeholder="Name"
+        class="form-control"
+        formControlName="name"
+        required
+      />
+      <div
+        class="errors"
+        *ngIf="!name?.valid && (name?.touched || name?.dirty)"
+      >
+        <div [hidden]="!name?.errors?.['required']">Name is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <input
+        type="text"
+        id="message"
+        placeholder="message"
+        class="form-control"
+        formControlName="message"
+        required
+      />
+      <div
+        class="errors"
+        *ngIf="!message?.valid && (message?.touched || message?.dirty)"
+      >
+        <div [hidden]="!message?.errors?.['required']">Message is required</div>
+        <div [hidden]="!message?.errors?.['minlength']">
+          Minimum length is 10
+        </div>
+      </div>
+    </div>
+    <button type="submit" [disabled]="!contactForm.valid" class="btn-submit">
+      Sign In
+    </button>
+  </form>
+
+  <div *ngIf="!showForm">
+    <h4 class="success">
+      Thank you for contacting us we will be in touch shortly.
+    </h4>
+
+    <div class="info">
+      <h4>You have submitted the following message.</h4>
+      <p><b>Name :</b></p>
+      <p>{{ contactInfo.name }}</p>
+      <p><b>Message :</b></p>
+      <p>{{ contactInfo.message }}</p>
+    </div>
+  </div>
+</div>

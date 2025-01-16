@@ -1,0 +1,32 @@
+.nav {
+    display: flex;
+    background-color: #eb0000;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-option {
+    list-style: none; 
+    display: flex;
+    gap: 16px; 
+    margin: 0;
+    padding: 0;
+  }
+  
+  .option a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .option a:hover {
+    text-decoration: underline; 
+  }
+  
